@@ -1,0 +1,16 @@
+module modndowncounter_tb();
+
+reg clk,reset;
+wire [3:0]count;// Change the Count Size if the N value is greater than 16
+
+modndowncounter dut(.clk(clk),.reset(reset),.count(count));
+
+initial begin
+reset=1'b1;
+clk=1'b0;
+#8 reset=1'b0;
+
+end
+
+always #5 clk=~clk;
+endmodule
