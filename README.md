@@ -85,7 +85,8 @@ The purpose of this testbench is to verify the functionality of the logic_gates_
 
 
 ### OUTPUT WAVEFORM
-![image](https://github.com/tusharshenoy/VLSI_LAB_Practice_Questions/assets/107348474/f38e76bd-b972-48f2-95a1-d996cd9b76c3)
+![image](https://github.com/tusharshenoy/VLSI_LAB_Practice_Questions/assets/107348474/c2a5fb31-381c-4279-b827-3e339a7d724e)
+
 
 
 
@@ -157,10 +158,12 @@ This module can be used to convert a positive binary number in 4-bit `two's comp
    - This testbench is designed to test the functionality of the `nibble_2s_complement` module by generating random 4-bit input values and displaying the input nibble along with its corresponding two's complement output. The simulation runs for 25 iterations before terminating.
 
 ### CONSOLE OUTPUT
-![image](https://github.com/tusharshenoy/VLSI_LAB_Practice_Questions/assets/107348474/9b2047ce-2c34-4b43-87b1-43e054376388)
+![image](https://github.com/tusharshenoy/VLSI_LAB_Practice_Questions/assets/107348474/92990690-8f20-4ad5-8d96-94188698f5dc)
+
 
 ### OUTPUT WAVEFORM
-![image](https://github.com/tusharshenoy/VLSI_LAB_Practice_Questions/assets/107348474/da9732f2-5b6c-4aa3-91c4-388209c41bd2)
+![image](https://github.com/tusharshenoy/VLSI_LAB_Practice_Questions/assets/107348474/3490dbf3-5f0e-44b0-80b2-f15d0ec86863)
+
 
 
 
@@ -256,7 +259,8 @@ This module is a basic up counter that counts up on each clock cycle, except whe
 This testbench initializes the clock and reset signals, sets the initial values, and generates a clock with a period of 10 time units (5 time units high and 5 time units low). The aim is to test the `modnupcounter` module's functionality using the clock and reset signals provided by the testbench.
 
 ### OUTPUT WAVEFORM
-![image](https://github.com/tusharshenoy/VLSI_LAB_Practice_Questions/assets/107348474/e6f9c637-0e05-49f2-961a-f62ce6a362e5)
+![image](https://github.com/tusharshenoy/VLSI_LAB_Practice_Questions/assets/107348474/5101cbda-6c3e-432b-ba1d-750050072bd4)
+
 
 
 
@@ -351,7 +355,8 @@ This module implements a down counter that counts down on each clock cycle, exce
 This testbench initializes the clock and reset signals, sets their initial values, and generates a clock signal. The aim is to test the `modndowncounter` module's functionality using the provided clock and reset signals in the testbench simulation.
 
 ### OUTPUT WAVEFORM
-![image](https://github.com/tusharshenoy/VLSI_LAB_Practice_Questions/assets/107348474/f6b45032-9aaf-48c8-8c05-d578ffd1aae5)
+![image](https://github.com/tusharshenoy/VLSI_LAB_Practice_Questions/assets/107348474/f4ec4f87-4167-48d3-80ff-4db5ad31bb88)
+
 
 
 
@@ -456,12 +461,15 @@ This testbench initializes the clock, reset, and up/down control signals, genera
 
 ### OUTPUT WAVEFORMS
 #### 1)	 When ud=0 UP Count , MOD N UP Counter
-![image](https://github.com/tusharshenoy/VLSI_LAB_Practice_Questions/assets/107348474/ac692aa0-bc18-4085-b92b-c1c9c246fc94)
+![image](https://github.com/tusharshenoy/VLSI_LAB_Practice_Questions/assets/107348474/605136b0-4c08-48e9-8d5a-7fa6ff069c9d)
+
 
 
 #### 2)	When ud changes from 0 to 1 Down Count starts
-![image](https://github.com/tusharshenoy/VLSI_LAB_Practice_Questions/assets/107348474/7efe7b2d-c87f-448d-9b37-09ffa85ea9ea)
+![image](https://github.com/tusharshenoy/VLSI_LAB_Practice_Questions/assets/107348474/f0724497-ca05-48df-aa3a-13e2e5beac5f)
+
 
 
 #### 3)	When ud=1, DOWN Count, MOD N DOWN Counter
-![image](https://github.com/tusharshenoy/VLSI_LAB_Practice_Questions/assets/107348474/d7252387-ed11-4734-9750-c49cb7e169f5)
+![image](https://github.com/tusharshenoy/VLSI_LAB_Practice_Questions/assets/107348474/c4bc21cf-2471-4a6a-abf2-34f60dfa44a1)
+
