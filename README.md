@@ -1,6 +1,10 @@
 # VLSI_LAB_Practice_Questions
 
 ## Code Explaination
+## INDEX
+1. [Practice Question 1](Practice-Question-1)
+2. [Practice Question 2](Practice-Question-2) 
+3. [Practice Question 3](Practice-Question-3)
 
 ## Practice Question 1
 ### Verilog Code
