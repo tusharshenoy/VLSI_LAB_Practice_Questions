@@ -7,7 +7,8 @@
 3. [Practice Question 3](#Practice-Question-3)
 
 ## Practice Question 1
-### Verilog Code
+### Verilog codes for logic operations on 3 or more input bits,Verilog gate level model for a given Boolean expression and relevant Verilog testbenches.
+### Verilog Code (Logic Operation on 3 input BITs)
 1. **Module Declaration:**
     ```verilog
     module logic_gates_3in(a, b, c, yor, yand, ynor, ynand, yxor, yxnor);
@@ -88,6 +89,75 @@ The purpose of this testbench is to verify the functionality of the logic_gates_
 ![image](https://github.com/tusharshenoy/VLSI_LAB_Practice_Questions/assets/107348474/c2a5fb31-381c-4279-b827-3e339a7d724e)
 
 
+### Verilog Code (Logic Expression)
+1. **Module Declaration:**
+    ```verilog
+    module logic_expression(a, b, c, d, y);
+    input a, b, c, d; // Inputs a, b, c, d
+    output y; // Output y
+    wire w1, w2, w3; // Internal wires w1, w2, w3 for intermediate results
+    ```
+    - `module` keyword begins the module named `logic_expression`.
+    - `input a, b, c, d;` declares input ports a, b, c, d.
+    - `output y;` declares output port y.
+    - `wire w1, w2, w3;` declares three internal wires for intermediate signals.
+
+2. **Logic Calculation:**
+    ```verilog
+    and w1(a, b); // Performs AND operation between inputs a and b, stores the result in w1
+    and w2(c, d); // Performs AND operation between inputs c and d, stores the result in w2
+    and w3(w1, w2); // Performs AND operation between w1 and w2, stores the result in w3
+    or(y, w1, w2, w3); // Performs OR operation between w1, w2, and w3, outputs the result to y
+    ```
+    - `and` gate `w1` performs the logical AND operation between inputs `a` and `b`, generating the result in `w1`.
+    - `and` gate `w2` performs the logical AND operation between inputs `c` and `d`, generating the result in `w2`.
+    - `and` gate `w3` performs the logical AND operation between `w1` and `w2`, resulting in `w3`.
+    - `or` gate `y` performs the logical OR operation between `w1`, `w2`, and `w3`, resulting in the final output `y`.
+
+3. **End of Module:**
+    ```verilog
+    endmodule
+    ```
+    - `endmodule` denotes the end of the Verilog module.
+
+This Verilog module `logic_expression` computes the logical expression `y = ab + cd + abcd` by first performing individual AND operations for pairs of inputs (`ab` and `cd`). Then, it performs another AND operation between the results of the first two AND operations (`abcd`). Finally, it calculates the final output `y` by performing an OR operation between the three intermediate results `w1`, `w2`, and `w3`.
+
+
+### Testbench Code
+1. **Module Declaration:**
+    ```verilog
+    module logic_expression_tb;
+    reg a, b, c, d; // Input registers for a, b, c, d
+    wire y; // Output wire y
+
+    logic_expression dut(.a(a), .b(b), .c(c), .d(d), .y(y));
+    ```
+    - `module` keyword defines a testbench module named `logic_expression_tb`.
+    - `reg a, b, c, d;` declares four register variables `a`, `b`, `c`, and `d`.
+    - `wire y;` declares an output wire `y`.
+    - `logic_expression dut(.a(a), .b(b), .c(c), .d(d), .y(y));` instantiates a module named `logic_expression` with input connections `a`, `b`, `c`, `d` and output connection `y`.
+
+2. **Initial Block:**
+    ```verilog
+    initial begin
+        repeat(10) begin
+            a = $random; // Assigns random values to 'a'
+            b = $random; // Assigns random values to 'b'
+            c = $random; // Assigns random values to 'c'
+            d = $random; // Assigns random values to 'd'
+            #5; // Delays the simulation by 5 time units
+        end
+        $finish; // Terminates the simulation
+    end
+    ```
+    - The `initial` block is the initial behavior of the simulation.
+    - The `repeat(10)` loop executes 10 iterations.
+    - Within the loop, random values are assigned to the input registers `a`, `b`, `c`, and `d` using the `$random` system task.
+    - `#5;` delays the simulation by 5 time units after each set of random value assignments.
+    - `$finish;` terminates the simulation after the loop is completed.
+    - 
+### OUTPUT WAVEFORM
+![image](https://github.com/tusharshenoy/VLSI_LAB_Practice_Questions/assets/107348474/78abc571-4c49-484c-afe5-d5fc069b7b91)
 
 
 
