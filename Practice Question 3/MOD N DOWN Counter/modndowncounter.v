@@ -1,5 +1,4 @@
 module modndowncounter(clk,reset,count);
- integer i=0;
  parameter N=10;/*MOD*/
  input clk,reset;
  output reg [3:0]count;// Change the Count Size if the N value is greater than 16
