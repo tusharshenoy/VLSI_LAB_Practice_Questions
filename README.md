@@ -245,13 +245,11 @@ This module can be used to convert a positive binary number in 4-bit `two's comp
     module modnupcounter(clk, reset, count);
     input clk, reset;
     output reg [3:0] count; // Output is a 4-bit counter
-    integer i = 0;
     parameter N = 8; // MOD value, can be modified
     ```
     - `module` keyword begins the module named `modnupcounter`.
     - `input clk, reset;` declares input signals for clock and reset.
     - `output reg [3:0] count;` declares a 4-bit output register for the counter.
-    - `integer i = 0;` initializes an integer variable `i` (not used in the code).
     - `parameter N = 8;` sets the modulus 'N' for the counter. The counter will count up to this value.
 
 2. **Always Block:**
@@ -341,13 +339,11 @@ This testbench initializes the clock and reset signals, sets the initial values,
     module modndowncounter(clk, reset, count);
     input clk, reset;
     output reg [3:0] count; // Output is a 4-bit counter
-    integer i = 0;
     parameter N = 10; // MOD value, determines the maximum count
     ```
     - `module` keyword begins the module named `modndowncounter`.
     - `input clk, reset;` declares input signals for clock and reset.
     - `output reg [3:0] count;` declares a 4-bit output register for the counter.
-    - `integer i = 0;` initializes an integer variable `i` (not used in the code).
     - `parameter N = 10;` sets the modulus 'N' for the counter. The counter will count down to 0 and then load the value N-1.
 
 2. **Always Block:**
@@ -437,13 +433,11 @@ This testbench initializes the clock and reset signals, sets their initial value
     module modnupdowncounter(clk, reset, ud, count);
     input clk, reset, ud; // Inputs for clock, reset, and up/down control
     output reg [3:0] count; // Output is a 4-bit counter
-    integer i = 0;
     parameter N = 10; // MOD value, sets the maximum count
     ```
     - `module` keyword starts the module named `modnupdowncounter`.
     - `input clk, reset, ud;` declares inputs for clock, reset, and up/down control.
     - `output reg [3:0] count;` declares a 4-bit output register for the counter.
-    - `integer i = 0;` initializes an integer variable `i` (not used in the code).
     - `parameter N = 10;` sets the modulus 'N' for the counter.
 
 2. **Always Block:**
